@@ -6,6 +6,13 @@
   font-family: 'Cairo', sans-serif !important;
 }
 
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.swiper-slide {
+  height: auto !important;
+}
+
 html[data-bs-theme='dark'] {
   --bs-border-color: #616161;
 }
