@@ -37,7 +37,7 @@ import MoreResources from './pages/MoreResources';
 import FinalExamsSelector from './components/final_exams_selector/FinalExamsSelector';
 import GeneralSubjectsSelector from './pages/GeneralSubjectsSelector';
 
-import StudentOverallPage from './pages/StudentOverallPage'
+import StudentOverallPage from './pages/StudentOverallPage';
 import FindStudent from './pages/FindStudent';
 import DegreesAnalyticsPage from './pages/DegreesAnalyticsPage';
 // import RecordingsContact from './pages/RecordingsContact';
@@ -74,11 +74,8 @@ function App() {
           {/* Degrees */}
           <Route path="/degrees/:grade/:year" element={<DegreesPage />} />
           <Route path="/degrees/:grade/:year/:studentId" element={<StudentDegreesPage />} />
-          <Route path='/ranking/:grade/:term/:year' element={<RankingByTermPage />} />
-
-          <Route path='/ranking/:grade/term_2/2025' element={<Ranking2025Term2 />} />
-
-
+          <Route path="/ranking/:grade/:term/:year" element={<RankingByTermPage />} />
+          <Route path="/ranking/:grade/term_2/2025" element={<Ranking2025Term2 />} />
           {/* Books */}
           <Route path=":grade/books/:term" element={<BooksSelector />} />
           <Route path="/book/:bookId" element={<BookPage />} />
@@ -126,23 +123,10 @@ function App() {
             path="/:grade/lectures_recordings/:term"
             element={<LecturesRecordingsSelector />}
           />
-
           {/* Student Overall */}
-          <Route
-            path="/students/:student_id"
-            element={<StudentOverallPage />}
-          />
-
-          <Route
-            path="/find_student"
-            element={<FindStudent />}
-          />
-
-          <Route
-            path="/degrees_analytics/2025"
-            element={<DegreesAnalyticsPage />}
-          />
-
+          <Route path="/students/:student_id" element={<StudentOverallPage />} />
+          <Route path="/find_student" element={<FindStudent />} />
+          <Route path="/degrees_analytics/2025" element={<DegreesAnalyticsPage />} />
         </Route>
       </>,
     ),

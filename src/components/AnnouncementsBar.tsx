@@ -1,5 +1,3 @@
-'use client';
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -30,12 +28,12 @@ const announcements = [
 
 const AnnouncementsBar = () => {
   return (
-    <div className="bg-dark py-3 border">
+    <div className="bg-dark py-3 border-top">
       <Swiper
         slidesPerView="auto"
         spaceBetween={50}
         loop
-        speed={15000}
+        speed={5000}
         allowTouchMove={false}
         autoplay={{
           delay: 0,

@@ -8,6 +8,7 @@ import UserHeader from '../components/user_header/UserHeader';
 import LoadingSpinner from '../components/global/LoadingSpinner';
 import { onAuthStateChanged } from 'firebase/auth';
 import { firebaseAuth } from '../utils/firebaseInit';
+import WarningModal from '../components/WarningModal';
 
 const MainLayout = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,6 +21,7 @@ const MainLayout = () => {
 
   return (
     <div className="d-flex flex-column min-vh-100">
+      <WarningModal />
       <Header />
       <SubHeader />
       <UserHeader />
