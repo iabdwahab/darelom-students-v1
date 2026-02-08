@@ -3,6 +3,29 @@ import { useState } from 'react';
 const NEW_DOMAIN = 'https://darelom-students.netlify.app';
 const STORAGE_KEY = 'warningModalDismissed';
 
+const pulseKeyframes = `
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+@keyframes pulseRing2 {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+`;
+
 export default function WarningModal() {
   const [isVisible, setIsVisible] = useState(() => {
     return !sessionStorage.getItem(STORAGE_KEY);
@@ -20,26 +43,63 @@ export default function WarningModal() {
 
   return (
     <>
+      <style>{pulseKeyframes}</style>
+
       {/* Floating circle button – bottom right */}
       {!isVisible && (
-        <button
-          onClick={() => setIsVisible(true)}
-          className="btn btn-danger rounded-circle shadow d-flex align-items-center justify-content-center"
+        <div
           style={{
             position: 'fixed',
             bottom: '1.25rem',
             right: '1.25rem',
-            width: '50px',
-            height: '50px',
+            width: '54px',
+            height: '54px',
             zIndex: 1055,
-            fontSize: '1.4rem',
-            lineHeight: 1,
-            paddingTop: '2px',
           }}
-          title="تنبيه تغيير العنوان"
         >
-          ⚠️
-        </button>
+          {/* Outer ring 1 */}
+          <span
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              border: '3px solid rgba(220, 53, 69, 0.6)',
+              animation: 'pulseRing 1.5s ease-out infinite',
+            }}
+          />
+          {/* Outer ring 2 (delayed) */}
+          <span
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              border: '3px solid rgba(220, 53, 69, 0.4)',
+              animation: 'pulseRing2 1.5s ease-out 0.4s infinite',
+            }}
+          />
+          <button
+            onClick={() => setIsVisible(true)}
+            className="btn btn-danger rounded-circle shadow d-flex align-items-center justify-content-center"
+            style={{
+              position: 'relative',
+              width: '54px',
+              height: '54px',
+              fontSize: '1.5rem',
+              lineHeight: 1,
+              paddingTop: '2px',
+              zIndex: 1,
+            }}
+            title="تنبيه تغيير العنوان"
+          >
+            ⚠️
+          </button>
+        </div>
       )}
 
       {/* Modal */}
