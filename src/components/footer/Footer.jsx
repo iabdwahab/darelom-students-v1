@@ -107,15 +107,15 @@ const Footer = () => {
             </ColumnParagraph>
           </Column>
 
-          <div>
-            <Column title="حسابات مطور المنصة" className="mb-4">
-              {/* <ColumnParagraph>
+          {/* <div>
+            <Column title="حسابات مطور المنصة" className="mb-4"> */}
+          {/* <ColumnParagraph>
               <a href="https://iabdwahab.github.io">معرض الأعمال.</a>
             </ColumnParagraph> */}
-              {/* <ColumnParagraph>
+          {/* <ColumnParagraph>
               <a href="https://wa.me/+201280552925">WhatsApp.</a>
             </ColumnParagraph> */}
-              <ColumnParagraph>
+          {/* <ColumnParagraph>
                 <a href="http://t.me/iabdwahab">Telegram.</a>
               </ColumnParagraph>
               <ColumnParagraph>
@@ -125,14 +125,14 @@ const Footer = () => {
                 <a href="https://github.com/iabdwahab">GitHub.</a>
               </ColumnParagraph>
             </Column>
-            <Column title="بعض أعمال المطور">
-              {/* <ColumnParagraph>
+            <Column title="بعض أعمال المطور"> */}
+          {/* <ColumnParagraph>
               <a href="https://iabdwahab.github.io">معرض الأعمال.</a>
             </ColumnParagraph> */}
-              {/* <ColumnParagraph>
+          {/* <ColumnParagraph>
               <a href="https://wa.me/+201280552925">WhatsApp.</a>
             </ColumnParagraph> */}
-              <ColumnParagraph>
+          {/* <ColumnParagraph>
                 <a href="https://mothalthagency.com">موقع شركة مثلث.</a>
                 <ColumnParagraph>
                   <a href="https://thecapital.sa">موقع شركة "ذا كابيتال".</a>
@@ -148,7 +148,7 @@ const Footer = () => {
                 <a href="https://world-ranks-iabdwahab.vercel.app">World Ranks.</a>
               </ColumnParagraph>
             </Column>
-          </div>
+          </div> */}
         </div>
         <hr />
         <p className="m-0">

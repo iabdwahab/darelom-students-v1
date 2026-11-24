@@ -14,7 +14,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import DegreesPage from './pages/DegreesPage';
-import RankingByTermPage from './pages/RankingByTermPage';
+// import RankingByTermPage from './pages/RankingByTermPage';
 import Ranking2025Term2 from './pages/Ranking2025Term2.jsx';
 import StudentDegreesPage from './pages/StudentDegreesPage';
 import ErrorPage from './pages/ErrorPage';
@@ -37,8 +37,8 @@ import MoreResources from './pages/MoreResources';
 import FinalExamsSelector from './components/final_exams_selector/FinalExamsSelector';
 import GeneralSubjectsSelector from './pages/GeneralSubjectsSelector';
 
-import StudentOverallPage from './pages/StudentOverallPage';
-import FindStudent from './pages/FindStudent';
+// import StudentOverallPage from './pages/StudentOverallPage';
+// import FindStudent from './pages/FindStudent';
 import DegreesAnalyticsPage from './pages/DegreesAnalyticsPage';
 // import RecordingsContact from './pages/RecordingsContact';
 
@@ -74,7 +74,7 @@ function App() {
           {/* Degrees */}
           <Route path="/degrees/:grade/:year" element={<DegreesPage />} />
           <Route path="/degrees/:grade/:year/:studentId" element={<StudentDegreesPage />} />
-          <Route path="/ranking/:grade/:term/:year" element={<RankingByTermPage />} />
+          {/* <Route path="/ranking/:grade/:term/:year" element={<RankingByTermPage />} /> */}
           <Route path="/ranking/:grade/term_2/2025" element={<Ranking2025Term2 />} />
           {/* Books */}
           <Route path=":grade/books/:term" element={<BooksSelector />} />
@@ -124,8 +124,8 @@ function App() {
             element={<LecturesRecordingsSelector />}
           />
           {/* Student Overall */}
-          <Route path="/students/:student_id" element={<StudentOverallPage />} />
-          <Route path="/find_student" element={<FindStudent />} />
+          {/* <Route path="/students/:student_id" element={<StudentOverallPage />} /> */}
+          {/* <Route path="/find_student" element={<FindStudent />} /> */}
           <Route path="/degrees_analytics/2025" element={<DegreesAnalyticsPage />} />
         </Route>
       </>,
